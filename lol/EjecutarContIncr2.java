@@ -19,12 +19,12 @@ public class EjecutarContIncr2
    System.out.print("valor incremento: ");
    i=scan.nextInt();
    
-   ContIncr contt= new ContIncr(c,i);
+   ContIncr2 contt= new ContIncr2(c,i);
    
    contt.incr();
    contt.incr();
    
-   System.out.printf("\nValor contador: %05d", contt.obtCont());
+   System.out.printf("Valor contador: %05d", contt.obtCont());
    
    contt.reiniciar();
    

@@ -1,19 +1,19 @@
 
 /**
- * EjecutarContIntB.
+ * Write a description of class EjecutarContIncr2B here.
  * 
- * @author (Jacobo Rave L) 
- * @version (2020/02/3)
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 import java.util.Scanner;
-public class EjecutarContIntB{
+public class EjecutarContInt2B{
 
     public static void main(String args[]){
     
      Scanner scan = new Scanner(System.in);   
      int i,c;
      
-     ContIncr cont2 = new ContIncr ();
+     ContIncr2 cont2 = new ContIncr2 ();
      
      System.out.print("ingrese valor inicial: ");
      c=scan.nextInt();
@@ -21,7 +21,7 @@ public class EjecutarContIntB{
      i=scan.nextInt();
            
      
-     ContIncr cont1 = new ContIncr (c, i);   
+     ContIncr2 cont1 = new ContIncr2 (c, i);   
      
      cont1.incr();
      cont1.incr();
@@ -30,7 +30,7 @@ public class EjecutarContIntB{
      cont2.incr();
      cont2.incr();
      
-     System.out.print("cont1: "+ cont1.obtCont()+" " +"cont2: "+ cont2.obtCont()+" "+"Fin");
+     System.out.print("cont1: "+ cont1.obtCont()+"  " +"cont2: "+ cont2.obtCont()+ " " + "Fin");
      
      cont1.reiniciar();
      
@@ -43,7 +43,7 @@ public class EjecutarContIntB{
      cont2.incr();
      cont2.incr();
      
-     System.out.print("\ncont1: "+ cont1.obtCont()+"  " +"cont2: "+ cont2.obtCont()+" "+"Fin");
+     System.out.print("\ncont1: "+ cont1.obtCont()+"  " +"cont2: "+ cont2.obtCont()+ " " + "Fin");
      
      
      System.out.print("\nnuevo valor incremento cont2: ");
@@ -59,6 +59,6 @@ public class EjecutarContIntB{
      cont1.incr();
      cont1.incr();
         
-     System.out.print("cont1: "+ cont1.obtCont()+"  " +"cont2: "+ cont2.obtCont()+" "+"Fin");
+     System.out.print("cont1: "+ cont1.obtCont()+"  " +"cont2: "+ cont2.obtCont()+" " + "Fin");
     }
 }
