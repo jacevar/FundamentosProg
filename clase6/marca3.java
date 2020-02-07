@@ -1,33 +1,47 @@
-
 /**
- * Write a description of class marca3 here.
+ * Wvueltas de formula 1.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jacobo Rave L) 
+ * @version (2020/02/7)
  */
-public class marca3
+import java.util.*;
+public class Marca3
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class marca3
-     */
-    public marca3()
+    public static void main(String []args)
     {
-        // initialise instance variables
-        x = 0;
+        Scanner scan =new Scanner(System.in);
+
+        float vuelta1, vuelta2, vuelta3;
+
+        System.out.print("Entrada vuelta1, vuelta 2, vuelta3: "); 
+        vuelta1= scan.nextFloat();
+        vuelta2= scan.nextFloat();
+        vuelta3= scan.nextFloat();
+
+        float menor;
+        if(vuelta1<vuelta2){
+            if(vuelta1<vuelta3){
+                menor=vuelta1;
+            }
+            else
+            { 
+                menor=vuelta3;
+            }
+
+        }
+        else{
+            if(vuelta2<vuelta3){
+                menor=vuelta2;
+            }
+            else{
+                menor=vuelta3;
+            }
+
+        }
+
+        System.out.println("La menor: " + menor);
+        float p= (vuelta1+vuelta2+vuelta3)/3.0f;
+        System.out.println("El prom: "+p);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
 }
