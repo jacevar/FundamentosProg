@@ -14,11 +14,11 @@ public class ContadorLimiteIdaRegreso
   public ContadorLimiteIdaRegreso(int lim1, int lim2){
      
       if (lim1 < lim2){
-          this.LimiteInf = lim1;
-          this.LimiteSup = lim2;
+          LimiteInf = lim1;
+          LimiteSup = lim2;
         }else{
-            this.LimiteInf = lim2;
-            this.LimiteSup = lim1;
+            LimiteInf = lim2;
+            LimiteSup = lim1;
         }
         
         valorActual=LimiteInf;

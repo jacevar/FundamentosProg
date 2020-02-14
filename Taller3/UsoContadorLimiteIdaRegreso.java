@@ -2,8 +2,8 @@
 /**
  * UsoContadorLimiteIdaRegreso.
  * 
- * @author (acobo Rave Londoñ) 
- * @version (a version number or a date)
+ * @author (Jacobo Rave Londoño) 
+ * @version (2020/02/14)
  */
 import java.util.Scanner;
 public class UsoContadorLimiteIdaRegreso

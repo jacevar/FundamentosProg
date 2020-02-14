@@ -2,8 +2,8 @@
 /**
  * Write a description of class SalarioDia3 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jacobo Rave Londoño) 
+ * @version (2020/02/12)
  */
 import java.util.Scanner;
 public class SalarioDia3
@@ -49,7 +49,7 @@ public class SalarioDia3
             case 1:
             System.out.println("Salario: "+ salario);
             break;
-            case 0:
+        case 0:
             System.out.print("Error codigo día equivocado: ");
             break;
             

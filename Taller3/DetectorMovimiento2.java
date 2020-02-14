@@ -2,8 +2,8 @@
 /**
  * Write a description of class DetectorMovimiento2 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jacobo Rave Londoño) 
+ * @version (2020/02/10)
  */
 import java.util.Scanner;
 public class DetectorMovimiento2
