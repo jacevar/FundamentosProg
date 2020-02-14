@@ -14,14 +14,14 @@ public class Impuestos2
         i=scan.nextInt();
 
         if(i>=90000000){
-            float in;
-            in= (i*1.1f)/100;
-            System.out.print( "Su impuesto es de: "+in);
+            float im;
+            im= (i*1.1f)/100;
+            System.out.print( "Su impuesto es de: "+im);
         }
         else{
-            float in;
-            in= (i*0.9f)/100;
-            System.out.print( "Su impuesto es de: "+in);
+            float im;
+            im= (i*0.9f)/100;
+            System.out.print( "Su impuesto es de: "+im);
         }
     }
 }
