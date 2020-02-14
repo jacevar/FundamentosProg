@@ -46,10 +46,10 @@ public class SalarioDia3
         }
         
         switch(error){
-            case 1:
+            case 0:
             System.out.println("Salario: "+ salario);
             break;
-        case 0:
+        case 1:
             System.out.print("Error codigo día equivocado: ");
             break;
             
