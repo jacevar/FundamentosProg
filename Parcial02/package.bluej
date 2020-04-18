@@ -1,19 +1,19 @@
 #BlueJ package file
-dependency1.from=ExecVentas
-dependency1.to=Ventas
+dependency1.from=ExecDivCadena
+dependency1.to=DivCadena
 dependency1.type=UsesDependency
-dependency2.from=ExecDivCadena
-dependency2.to=DivCadena
+dependency2.from=ExecVentas
+dependency2.to=Ventas
 dependency2.type=UsesDependency
 editor.fx.0.height=838
 editor.fx.0.width=1550
 editor.fx.0.x=-7
 editor.fx.0.y=-7
-objectbench.height=93
+objectbench.height=108
 objectbench.width=1512
 package.divider.horizontal=0.6
-package.divider.vertical=0.8644480519480519
-package.editor.height=632
+package.divider.vertical=0.8455086580086579
+package.editor.height=619
 package.editor.width=1397
 package.editor.x=0
 package.editor.y=0
