@@ -1,33 +1,18 @@
 
 /**
- * Write a description of class potencia here.
+ * Calcula x a la n.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jacobo Rave Londoño) 
+ * @version (2020/04/22)
  */
 public class potencia
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public static int potencia(int x, int n){
 
-    /**
-     * Constructor for objects of class potencia
-     */
-    public potencia()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+        if(n==0){
+            return 1;}
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        return x * potencia(x, n-1);
+
     }
 }
