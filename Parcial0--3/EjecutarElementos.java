@@ -13,4 +13,6 @@ public class EjecutarElementos {
 
 	System.out.println(elemento.obtLongitud());
     }
+    
+    
 }
