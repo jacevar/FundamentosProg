@@ -23,7 +23,7 @@ public class Elemento {
 
         if(siguiente!=null){
 
-            return 1+siguiente.obtLongitud();
+            return obtSiguiente().obtLongitud()+1;
         }
         else
             return 1;}
