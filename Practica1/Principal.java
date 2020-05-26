@@ -1,150 +1,84 @@
-
-/**
- * Ejemplo de una clase principal.
- * En esta clase se interactúa con el usuario pidiéndole
- * las acciones que desea desear mediante un menú texto
- * por la consola.
- *
- * @author Helmuth Trefftz
- * @version Mayo, 2020
- */
-import java.util.Scanner;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-public class Principal
-{
-    
-    /**
-     * Opción para leer archivo
-     */
-    public static final int LEER_ARCHIVO = 1;
-    
-    /**
-     * Opción para ordenar por código
-     */
-    public static final int ORDENAR_POR_CODIGO = 2;
-    
-    /**
-     * Opción para imprimir la colección
-     */
-    public static final int IMPRIMIR = 3;
-    
-    /**
-     * Opción para escribir archivo
-     */
-    public static final int ESCRIBIR_ARCHIVO = 4;
-     
-    /**
-     * Opción para terminar el programa
-     */
-    public static final int TERMINAR = 99;
-    
-    /**
-     * Esta es la colección de datos.
-     * Solo hay una activa en un momento dado.
-     */
+import java.util.*;
+public class Principal{
+    private final static int Salir=0;
     private ColeccionDatos cd;
-    
-    /**
-     * Scanner para leer datos que ingresa el usuario
-     */
-    private Scanner in;
-    
-    public Principal() {
-        cd = new ColeccionDatos();
-        in = new Scanner(System.in);
+    private ColeccionVelas cv;
+    private Scanner scan;
+    public Principal(){
+        scan=new Scanner(System.in);
+        cd=new ColeccionDatos();
     }
-    
-    /**
-     * Este método le pide al usuario que ingrese el
-     * número que representa la acción que desea llevar a cabo.
-     * 
-     * @return Retorna el número de la opción escogida por el 
-     * usuario.
-     */
-    private int pedirOpcion() {
-        System.out.println("=====");
-        System.out.println("Por favor escoja entre las siguientes opciones:");
-        System.out.println(LEER_ARCHIVO + ". Leer archivo");
-        System.out.println(ORDENAR_POR_CODIGO + ". Ordenar lista por código");
-        System.out.println(IMPRIMIR + ". Imprimir la colección");
-        System.out.println(ESCRIBIR_ARCHIVO + ". Escribir archivo");
-        System.out.println(TERMINAR + ". Terminar");
-        
-        int opcion = in.nextInt();
+
+    private int pedirOpcion(){
+        int opcion;
+        System.out.println("=============\nMENU PRINCIPAL\n============");
+        System.out.println("1) Leer Fichero");
+        System.out.println("2) Ver Datos");
+        System.out.println("3) Cargar mis Velas");
+        System.out.println("4) Crear Velas Minuto");
+        System.out.println("5) Crear Velas Hora");
+        System.out.println("6) Ver Velas");
+        System.out.println("7) Guardar mis velas");
+        System.out.println("8) Filtrar mis Velas");
+        System.out.println("00) Salir");
+        System.out.print("---->");
+        opcion=scan.nextInt();
         return opcion;
     }
-    
-    /**
-     * Este método recibe el número de la opción que el usurio
-     * quiere llevar a cabo e invoca el método correspondiente.
-     * 
-     * @param opción Número de la opción escogida por el usuario.
-     */
-    private void procesarOpcion(int opcion) throws IOException {
-        if(opcion == LEER_ARCHIVO) {
-            try {
-                System.out.println("Por favor ingrese el nombre del archivo a leer: ");
-                String nombre = in.next();
-                //cd.leerArchivo(nombre);
-                throw new IOException("I am Exception Alpha!");
-            } 
+
+    private void procesarOpcion(int opcion){
+        switch(opcion){
+            case 1:
+            cd.leerDatos();break;
+            case 2:
+            cd.mostrarDatos();break;
             
-            catch (FileNotFoundException e)  {
-                //throw new FileNotFoundException("no se encuentra");
-                System.out.println("El archivo no existe " + e.getMessage());
+            case 3:
+                cv=new ColeccionVelas();
+                cv.leerVelas(); break;
+            case 4:
+            if(cd.datos.size()==0)
+                System.out.println("Deben haber datos para crear velas.");
+            else{
+                cv=new ColeccionVelas(cd.datos);
+                cv.crearVelas(1);
             }
-        } else if (opcion == ORDENAR_POR_CODIGO) {
-            //cd.ordenarPorCodigo();
-        } else if(opcion == IMPRIMIR) {
-            //cd.imprimir();
-        } else if (opcion == ESCRIBIR_ARCHIVO) {
-            try {
-                System.out.println("Por favor ingrese el nombre del archivo a escribir: ");
-                String nombre = in.next();
-               // cd.escribirArchivo(nombre);
-               throw new IOException("Archivo no encontrado");
-            } catch (FileNotFoundException e) {
-                System.out.println("No se pudo realizar la operación: " + e.getMessage());
+            break;
+
+            case 5:
+            if(cd.datos.size()==0)
+                System.out.println("Deben haber datos para crear velas.");
+            else{
+                cv=new ColeccionVelas(cd.datos);
+                cv.crearVelas(2);
             }
-            
-        } else {
-            System.out.println("Opción inválida. Por favor intente de nuevo");
+            break;
+            case 6:
+            if(cv!=null){
+                cv.mostrarVelas();
+                new Candles("Velas Graficas:  Velas creadas",cv.velas).mostrar();
+            }else
+                System.out.println("Crea velas para poder mostrarlas.");
+            break;
+            case 7:
+            if(cv!=null)
+                cv.guardarVelas();
+            else
+                System.out.println("Crea velas para poder guardarlas.");
+            break;
+            case 8:
+            cv.FiltrarLasVelas();break;
         }
+
     }
-    
-    /**
-     * Programa principal.
-     * El ciclo principal consiste en pedirle al usuario una
-     * opción y luego se invoca el método correspondiente
-     * para llevar a cabo la acción deseada.
-     * 
-     * @param args Opciones para ejecutar el programa.
-     * No se usan en esta aplicación.
-     */
-    public static void main(String [] args) {
-        // Principal p = new Principal();
-        // int opcion = p.pedirOpcion();
-        // while (opcion != TERMINAR) {
-            // //p.procesarOpcion(opcion);
-            // opcion = p.pedirOpcion();
-        // }
-        ColeccionDatos col = new ColeccionDatos();
-        ArrayList<Datos> datos = new ArrayList();
-        datos = col.getList();
-        int total = datos.size();
-        int velaType=1;
-        for(int i = 0 ; i<total ; i++){
-        
-       System.out.println(Double.toString(datos.get(i).last)+ " " + " "+ datos.get(i).fecha + " " +  datos.get(i).hora + " " +  datos.get(i).min);
-        
-        
-        }
-       ColeccionVelas colec = new ColeccionVelas();
-       ArrayList<Velas> velas = new ArrayList();
-       velas=colec.crearVelas(velaType, datos);
-        System.out.println("El programa ha terminado. Gracias.");
+
+    public static void main(String[] args){
+        Principal ejecutar = new Principal();
+        int opcion=-1;   
+        do{
+            opcion=ejecutar.pedirOpcion();
+            ejecutar.procesarOpcion(opcion);
+        }while(opcion!=Salir);
     }
+
 }

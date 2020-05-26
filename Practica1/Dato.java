@@ -1,49 +1,26 @@
+public class Dato{
+    int Fecha, Hora, Minutos, nTrans, Millonesimas;
+    double Last,Bid, Ask;
+    public Dato(int Fecha, int Hora,int Millonesimas, double Bid, double Ask, double Last, int nTrans){
+        this.Fecha=Fecha;
+        this.Hora=Hora;
+        this.Millonesimas=Millonesimas;
+        this.Bid=Bid;
+        this.Ask=Ask;
+        this.Last=Last;
+        this.nTrans=nTrans;
+        this.Minutos=(Hora/100)%100;
+    }
 
-/**
- * En esta clase se maneja la información de un dato.
- *
- * @author Helmuth Trefftz
- * @version Mayo, 2020
- */
-public class Dato
-{
-    private int codigo;
-    private String nombre;
-    
-    /***
-     * Constructor de la clase Dato.
-     * @ param codigo Código de la persona
-     * @ param nombre Nómbre de la persona
-     */
-    public Dato(int codigo, String nombre) {
-        this.codigo = codigo;
-        this.nombre = nombre;
+    public void mostrarDato(){
+        System.out.println(Fecha+" "+Hora+" "+Millonesimas+" "+Bid+";"+Ask+";"+Last+";"+nTrans);   
     }
     
-    /**
-     * Método para acceder al código de la persona.
-     * 
-     * @return Código de la persona
-     */
-    public int getCodigo() {
-        return this.codigo;
-    }
-    /**
-     * Método para acceder al nombre de la persona.
-     * 
-     * @return Nombre de la persona
-     */
-    public String getNombre() {
-        return this.nombre;
+    public int getMinutos(){
+        return Minutos;
     }
     
-    /**
-     * Método para imprimir el contenido de un dato.
-     */
-    public String toString() {
-        String ret = "";
-        ret += codigo + " ";
-        ret += nombre;
-        return ret;
+    public int getHoras(){
+        return Hora/10000;
     }
 }
