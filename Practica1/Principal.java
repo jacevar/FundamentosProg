@@ -1,4 +1,8 @@
-import java.util.*;
+/**
+ * 
+ * @author(Jacobo )
+ * @version(2020/05/25)
+ */import java.util.*;
 public class Principal{
     private final static int Salir=0;
     private ColeccionDatos cd;
@@ -8,7 +12,10 @@ public class Principal{
         scan=new Scanner(System.in);
         cd=new ColeccionDatos();
     }
-
+/**
+ * 
+ * El método pedirOpcion crea un menú de las funcionalidades del sistema
+ */
     private int pedirOpcion(){
         int opcion;
         System.out.println("=============\nMENU PRINCIPAL\n============");
@@ -26,6 +33,11 @@ public class Principal{
         return opcion;
     }
 
+       
+/**
+ * 
+ * El método ProcesarOpcion clasifica las funcionalidades del sistema
+ */
     private void procesarOpcion(int opcion){
         switch(opcion){
             case 1:
@@ -72,6 +84,10 @@ public class Principal{
 
     }
 
+    /**
+ * 
+ * El método main ejecuta las funcionalidades del sistema
+ */
     public static void main(String[] args){
         Principal ejecutar = new Principal();
         int opcion=-1;   

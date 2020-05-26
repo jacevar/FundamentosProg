@@ -1,8 +1,18 @@
+/**
+ * 
+ * @author(Jacobo )
+ * @version(2020/05/25)
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
 public class Archivo{
     private static Scanner scan;
+    /**
+ * 
+ * 
+ * El método leerDatos instancia la clase Dato y lee los datos del archivo uno por uno paa introducirlos en un array nuevo
+ */
     public static ArrayList<Dato> leerDatos(){
         ArrayList<Dato> datos=new ArrayList<>();
         System.out.println("Por favor inserta la ruta del archivo: ");
@@ -30,7 +40,11 @@ public class Archivo{
         }
         return datos;
     }
-    
+      /**
+ * 
+ * 
+ * El método leerVelas instancia la clase Dato y lee las velas del archivo.
+ */
     public static ArrayList<Vela> leerVelas(){
         ArrayList<Vela> velas=new ArrayList<>();
         System.out.println("Por favor inserta la ruta del archivo: ");

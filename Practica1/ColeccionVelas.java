@@ -11,10 +11,20 @@ public class ColeccionVelas
     private ArrayList<Dato> datos;
     ArrayList<Vela> velas;
     private ArrayList<Vela> velasFiltradas;
+     /**
+  * Este constructor es para poder ser utilizado en otras clases
+  * .
+  * 
+  */
     public ColeccionVelas(){
 
     }
-
+    
+  /**
+  * Este constructor es para controlar el arrayList de Vela 
+  * @param  ArrayList<Dato> datos es para designar datos de la clase Dato a datos de la clase ColeccionVelas.
+  * 
+  */
     public ColeccionVelas(ArrayList<Dato> datos){
         this.datos=datos;
         velas=new ArrayList<>();
@@ -75,7 +85,11 @@ public class ColeccionVelas
         }
         System.out.println(velas.size()+" velas creadas exitosamente.");
     }
-
+    
+    /**
+    * El metodo mostrarVelas muestra las Velas o por minutos o por horas.
+    * 
+    */
     public void mostrarVelas(){
         for(Vela v:velas){
             System.out.println(v.getVela());
@@ -83,6 +97,11 @@ public class ColeccionVelas
         System.out.println(velas.size()+" velas mostradas exitosamente.");
     }
 
+    /**
+    * El metodo guardarVelas hace un llamado a la clase Scanner y archivo para leer el nombre de 
+    * como se va a llamar el archivo nuevo. Captura una excepcion y guarda las Velas o por minutos o por horas.
+    * 
+    */
     public void guardarVelas(){
         Scanner scan = new Scanner(System.in);
         File archivo=null;
@@ -103,6 +122,11 @@ public class ColeccionVelas
 
     }
 
+    
+    /**
+    * El método Filtrar las velas da el menú de los tipos de filtrados que hay.
+    * 
+    */
     public void FiltrarLasVelas(){
         Scanner scan=new Scanner(System.in);
         int opcion=-1;
@@ -196,6 +220,10 @@ public class ColeccionVelas
         System.out.println(velasFiltradas.size()+" velas filtradas exitosamente.");
     }
 
+    /**
+     * El metodo grabarFiltradas hace instancia de la clse archivo y es el encargado de grabar las velas de acuerdo con la filtracion.
+     * 
+     */
     private void grabarFiltradas(){
         Scanner scan = new Scanner(System.in);
         File archivo=null;
