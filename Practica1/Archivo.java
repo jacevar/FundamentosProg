@@ -1,17 +1,22 @@
 /**
- * 
+ * Esta clase lee el archivo y las velas ya creadas
  * @author(Jacobo )
  * @version(2020/05/25)
  */
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Archivo{
     private static Scanner scan;
     /**
  * 
  * 
- * El método leerDatos instancia la clase Dato y lee los datos del archivo uno por uno paa introducirlos en un array nuevo
+ * El método leerDatos instancia la clase Dato y lee los datos del archivo uno por uno para
+ * introducirlos en un array nuevo y lo retorna despues.
+ * @return datos (lista de datos)
  */
     public static ArrayList<Dato> leerDatos(){
         ArrayList<Dato> datos=new ArrayList<>();
@@ -28,23 +33,26 @@ public class Archivo{
                 int Fecha=line.nextInt();
                 int Hora=line.nextInt();
                 int Millonesimas=line.nextInt();
-                double Bid=Double.parseDouble(line.next());
+                double Bid = Double.parseDouble(line.next());
                 double Ask=Double.parseDouble(line.next());
                 double Last=Double.parseDouble(line.next());
                 int nTrans=line.nextInt();
                 Dato dato = new Dato(Fecha, Hora, Millonesimas, Bid, Ask, Last,nTrans);
                 datos.add(dato);
+                
+                //fecha: 20200429 Hora: 095003 Mill: 4450000 bid: 8810 ask:8809.5 last:8810 trans: 1
             }
         }catch(FileNotFoundException e){
-            System.out.println(e.getMessage());
+           System.out.println(e.getMessage()); 
         }
         return datos;
     }
       /**
- * 
- * 
- * El método leerVelas instancia la clase Dato y lee las velas del archivo.
- */
+      * 
+      * 
+      * El método leerVelas instancia la clase Vela y lee las velas del archivo.
+      * @return velas (lista de velas)
+      */
     public static ArrayList<Vela> leerVelas(){
         ArrayList<Vela> velas=new ArrayList<>();
         System.out.println("Por favor inserta la ruta del archivo: ");

@@ -1,5 +1,5 @@
 /**
- * 
+ * Esta clase grafica las velas
  * @author(Jacobo )
  * @version(2020/05/25)
  */

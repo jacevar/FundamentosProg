@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.File;
 import java.io.PrintStream;
 /**
- * 
+ * Esta clase crea las velas, las filtra y las graba
  * @author(Jacobo )
  * @version(2020/05/25)
  */
@@ -12,7 +12,7 @@ public class ColeccionVelas
     ArrayList<Vela> velas;
     private ArrayList<Vela> velasFiltradas;
      /**
-  * Este constructor es para poder ser utilizado en otras clases
+  * Este constructor es para poder inicializar
   * .
   * 
   */
@@ -50,12 +50,12 @@ public class ColeccionVelas
         
          int Fecha,Hora;
          double Maximo=0,Minimo=Double.MAX_VALUE,Inicial,Final;
-         String Color;
+         String Color; 
         
         for(int i=0;i<datos.size();i++){
             if(tipoVela==1){
-                tiempo=datos.get(aux).getMinutos();
-                tiempoActual=datos.get(i).getMinutos();
+                tiempo=datos.get(aux).getMinutos(); 
+                tiempoActual=datos.get(i).getMinutos(); 
             }else if(tipoVela==2){
                 tiempo=datos.get(aux).getHoras();
                 tiempoActual=datos.get(i).getHoras();
@@ -91,7 +91,7 @@ public class ColeccionVelas
     * 
     */
     public void mostrarVelas(){
-        for(Vela v:velas){
+        for(Vela v : velas){
             System.out.println(v.getVela());
         }
         System.out.println(velas.size()+" velas mostradas exitosamente.");
@@ -124,7 +124,8 @@ public class ColeccionVelas
 
     
     /**
-    * El método Filtrar las velas da el menú de los tipos de filtrados que hay.
+    * El método FiltrarLasVelas da el menú de los tipos de filtrados que hay y segun 
+    * la opcion se filtra por la eleccion.
     * 
     */
     public void FiltrarLasVelas(){
@@ -168,7 +169,8 @@ public class ColeccionVelas
     }
 
     /**
-     * El metodo filtrarVelitas es el encargado de filtrar las velas de acuerdo a los parametros del usuario.
+     * El metodo filtrarVelitas es el encargado de filtrar las velas de acuerdo a los
+     * parametros del usuario y la opcion de ordenamiento.
      * @param Fecha
      * @param Hora
      * @param Color
@@ -221,7 +223,8 @@ public class ColeccionVelas
     }
 
     /**
-     * El metodo grabarFiltradas hace instancia de la clse archivo y es el encargado de grabar las velas de acuerdo con la filtracion.
+     * El metodo grabarFiltradas hace instancia de la clse archivo y es el encargado 
+     * de grabar las velas de acuerdo con la filtracion.
      * 
      */
     private void grabarFiltradas(){

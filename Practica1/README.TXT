@@ -12,7 +12,7 @@ HOW TO START THIS PROJECT: Ejecutar el método main de la clase Principal.
 Click derecho esta clase y click en void main(String args[]){} o desde la terminal con el tipo 
 de archivo en este caso java y el nombre en este caso Principal
 AUTHORS: Jacobo Rave Londoño
-USER INSTRUCTIONS: Al ejecutar el método main se despliega un menú con 9 opciones 
+USER INSTRUCTIONS: Al ejecutar el método main se despliega un menú con 9 opciones y la 10 para salir
 ("1) Leer Fichero");
 ("2) Ver Datos");
 ("3) Cargar mis Velas");
@@ -21,6 +21,7 @@ USER INSTRUCTIONS: Al ejecutar el método main se despliega un menú con 9 opcio
 ("6) Ver Velas");
 ("7) Guardar mis velas");
 ("8) Filtrar mis Velas");
+("9) Backtesting");
 ("00) Salir");
 
 si se da 1 hay que ingresar la ruta del archivo Linux: ../archivo.txt  Windows: ..\archivo.txt
@@ -54,5 +55,21 @@ Si se pide ordenar por color despues se da 5 para que la filtre
 6 = grabar la vela filtrada para despues descargarla
 0 = para volver al menú principal
 
+si se da 9 aparece una lista de estrategias.
 
+1) Crear mis estrategias
+2) Probar mis estrategias
 
+  si se da 1 aparece este  menú
+
+  1) Estrategia Sencilla
+  2) Estrategia Compuesta de Cruce
+  3) Estrategia Booleana
+
+    si da 1 en sencilla nos piden nombre de la estrategia 
+
+    1) Regresion Lineal
+    2) Promedio Movil
+
+       si se da 1 pide la longitud y el threshold
+       si se da 2 pide la longitud y el threshold

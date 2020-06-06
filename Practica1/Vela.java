@@ -1,5 +1,5 @@
 /**
- * 
+ * Esta clase contiene los atributos de vela
  * @author(Jacobo )
  * @version(2020/05/25)
  */
@@ -10,7 +10,7 @@ public class Vela
     String Color;
 
     /**
-     * El constructor Vela recibe unos parametros para designar ls atributos de Vela.
+     * El constructor Vela recibe unos parametros para designar los atributos de Vela.
      *@param Color
      *@param Fecha
      *@param Hora
@@ -37,8 +37,11 @@ public class Vela
     }
     /**
      * 
-     * El método getVela es para obtener la vela con sus atributos
+     * El método getVela es para obtener la vela comleta(renglon) con sus atributos 
+     * y ser despues con un ciclo obtener los valores.
+     * @return renglon con datos de la vela
      */
+    
     public String getVela(){
         return Color+" "+Fecha+" "+Hora+" "+Maximo+" "+Minimo+" "+Inicial+" "+Final+" "+Volumen;
     }

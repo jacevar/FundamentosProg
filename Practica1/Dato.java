@@ -1,5 +1,5 @@
 /**
- * 
+ * Esta clase contiene los atributos de Dato
  * @author(Jacobo )
  * @version(2020/05/25)
  */public class Dato{
@@ -29,18 +29,21 @@
     }
     /**
      * El método mostrarDato muestra los datos del archivo txt.
+     * 
      */
     public void mostrarDato(){
         System.out.println(Fecha+" "+Hora+" "+Millonesimas+" "+Bid+";"+Ask+";"+Last+";"+nTrans);   
     }
     /**
      * El método getMinutos obtiene los minutos de los datos.
+     * @return minutos
      */
     public int getMinutos(){
         return Minutos;
     }
     /**
      * El método getHoras obtiene las horas de los datos.
+     * @return hora
      */
     public int getHoras(){
         return Hora/10000;
