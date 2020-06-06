@@ -73,3 +73,55 @@ si se da 9 aparece una lista de estrategias.
 
        si se da 1 pide la longitud y el threshold
        si se da 2 pide la longitud y el threshold
+
+       
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Implementacion de las estrategias = Jacobo Rave Londoño
+
+Estrategia Sencilla
+regresion lineal
+
+n = 5   threshold = 8022  hora = 952   fecha  = 20200429
+Se espera que baje el precio y que no invierta.
+
+El programa nos dice 0 de 1 estrategia recomienda que invierta.
+No invertir
+
+
+
+
+
+EstrategiaCompuestaDeCruce
+Promedio movil 1 n=10 
+
+promedio movil 2 n=15
+
+hora = 949 fecha = 20200429
+
+Se espera que suba para invertir 
+El programa nos dice 1 de 1 recomienda que invierta
+
+
+
+
+
+
+EstrategiaCompuestaBooleana:
+
+Estrategia Sencilla 
+Regresion lineal
+                    nombre = a
+                    longitud = 5
+                    threshold = 8814
+
+EstrategiaCompuestaDeCruce
+PromedioMovil 
+                    nombre = s
+                    longitud1 = 6
+                    longitud2 = 10
+
+Hora = 954 Fecha = 20200429
+
+Se espera que invierta
+El programa dice que  1 de 2 recomienda que invierta
