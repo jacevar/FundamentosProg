@@ -1,10 +1,7 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+
 ------------------------------------------------------------------------
 
-PROJECT TITLE: Práctica Numero 01. 
+PROJECT TITLE: 
 PURPOSE OF PROJECT: Orientar a los traders amateurs y profesionales en la verificacion de acciones
 de la bolsa de chicago.
 VERSION or DATE:2020/05/25 y 2020/06/4
